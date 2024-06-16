@@ -1,0 +1,464 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --Strong-cyan: hsl(172, 67%, 45%);
+
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+  
+  --picker: hsl(174, 44%, 74%);
+  --Font-size-form-inputs: 24px;
+
+  --Font-Family: Space Mono;
+  #9ED9D3
+  --Weights: 700;
+
+}
+
+
+
+body {
+   font-family: var(--Font-Family);
+   font-size: 1em;
+   overflow-x: none;
+   background-color: var(--Light-grayish-cyan);
+}
+
+
+ header {
+    width:100%;
+    background-color: var(--Light-grayish-cyan);
+    
+}
+
+.logo {
+    margin: auto;
+    padding: 3em;
+    text-align: center;
+    display: block;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    margin: auto;
+    display: block;
+    width: 23.4em;
+    min-height: 50em;  
+}
+
+.bill-form {
+    background-color:var(--White);
+    border-radius: 15px;
+    min-height: 55em;
+}
+
+.form-name {
+    font-family: var(--Font-Family);
+    font-size: 0.95em;
+    font-weight: 600;
+    margin-top: -0.5em;
+    padding: 2em;
+    color: var(--Dark-grayish-cyan);
+}
+
+.input_bill {
+    margin-top: -1.5em;
+}
+
+.input_bill input {
+    padding: 1em;
+    width: 24em;
+    margin-left: 1.2em;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--Very-light-grayish-cyan);
+    
+}
+
+.input_bill:hover .bill{
+    border: 2px solid;
+    border-color: var(--Strong-cyan);
+}
+
+.dollarSign {
+    position: absolute;
+    left: 3em;
+    padding-top: 0.85em;
+}
+
+input::placeholder {
+    font-size: var(--Font-size-form-inputs);
+    color: hsl(183, 100%, 15%);
+    font-weight: var(--Weights);
+    text-align: right; 
+}
+
+
+
+.tip {
+    margin: 2em 1.2em;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 600;
+}
+
+.grid-container {
+    display: grid;
+    margin-top: -0.8em;
+    margin-left: 1.5em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Adjust spacing between items as needed*/ 
+  }
+
+  .service button, #custom {
+    width: 7.5em;
+    padding: 16px;
+    
+  }
+
+  .service button {
+    font-size: 19px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    font-weight: var(--Weights);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+   .service:hover button{
+    background-color: var(--picker);
+    color: var(--Very-dark-cyan);
+  }
+
+  .active button{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+  }
+
+  
+
+  #custom {
+    font-size: 19px;
+    text-align: center;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #custom::placeholder {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .service:hover #custom {
+    border: 2px solid;
+    border-color: var(--Strong-cyan);
+}
+
+
+
+.inputPeople {
+    margin: 2.5em 1.2em;
+}
+
+label[for="name"] {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 600;
+
+}
+
+.error-msg {
+    position: absolute;
+    right: 3em;
+    font-size: 14px;
+    color: red;
+    display: none;
+}
+
+.input_people input {
+    margin-top: 0.5em;
+    width: 24em;
+    padding: 1em;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    border-radius: 5px;
+}
+
+.input_people:hover .numb-people {
+    border: 2px solid;
+    border-color: var(--Strong-cyan);
+}
+
+.icon-person {
+    position: absolute;
+    left: 3em;
+    margin-top: 1.5em;
+
+}
+
+/* BOTTOM TIP SECTION & RIGHT SIDE*/
+
+.tip_per_person {
+    margin: -0.5em auto;
+    width: 20.2em;
+    height: 19em;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 5px;
+}
+
+.tipAmount {
+    
+    width: 20em;
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-left: 1.3em;
+}
+
+.amount-tip {
+    font-family: var(--Font-Family);
+    font-weight: var(--Weights);
+    letter-spacing: 1px;
+    display: flex;
+    color: var(--White);
+    gap: 5em;
+}
+
+.totalValue {
+   font-size: 2em;
+   color: var(--Strong-cyan);
+   right: 1.5em;
+   position: absolute;
+   
+}
+
+.tipPerson {
+    font-family: var(--Font-Family);
+    font-weight: var(--Weights);
+    margin-top: 0.5em;
+    color: var(--Grayish-cyan);
+}
+
+
+.totalPerson {
+    width: 20em;
+    margin-top: 3em;
+    padding-left: 1.3em;
+}
+
+.total {
+    font-family: var(--Font-Family);
+    font-weight: var(--Weights);
+    letter-spacing: 1px;
+    margin-top: -1.5em;
+    display: flex;
+    color: var(--White);
+}
+
+.totalPer {
+    font-size: 2em;
+    right: 1.5em;
+    position: absolute;
+    color: var(--Strong-cyan);  
+}
+
+.resetButton {
+    width: 20em;
+    margin: auto;
+}
+
+.resetButton button{
+    margin: 1.9em auto;
+    width: 15em;
+    padding: 0.5em;
+    display: block;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#btnreset {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--Strong-cyan);
+}
+
+#btnreset:hover {
+    background-color: var(--picker);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: var(--Weights);
+  }
+
+  /**
+  *!-----------DESKTOP SECTION----------
+  **/
+
+  @media screen and (min-width: 768px){
+
+    .mobile-mockup {
+        display: none;
+    }
+
+    body {
+        overflow-x: none;
+    }
+
+    header {
+        margin-top: 5em;
+    }
+
+    .logo {
+        padding-top: 7em;
+    }
+
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .tipSection {
+        margin-left: 2em;
+        width: 30em;
+    }
+
+    .bill-form {
+        margin-left: 20%;
+        margin-right: 40%;
+        width: 57em;
+        min-height: 20em;
+        overflow: hidden;
+    }
+
+    .flex {
+        width: 50%;
+    }
+
+
+    .input_bill input {
+        margin-left: 2em;
+        width: 29em;
+    }
+
+    .form-name {
+        margin-top: 1.9em;
+    }
+
+    .bill {
+        margin-top: -5em;
+    }
+
+    .dollarSign {
+        left: 20em;
+        top: 45.5%;
+    }
+
+    .tip {
+        margin-left: 0.5em;
+    }
+
+    /*GRID CONTAINER SECTION*/
+
+    .service button, #custom {
+        width: 5.8em;
+        padding: 10px;
+        margin-left: -0.5em;
+        margin-top:-1em ;
+    }
+
+    .grid-container {
+        display: grid;
+        width: 25em;
+        padding: 1em;
+        margin-left: -1em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 27px; /* Adjust spacing between items as needed*/ 
+    }
+
+    #custom::placeholder {
+        font-size: 15px;
+    }
+
+     .name {
+        position: absolute;
+        left: -1em;
+    }
+
+    .icon-person {
+        left: 20em;
+    }
+
+    .input_people input {
+        width: 28.5em;
+        margin-left: -2.5em;
+    }
+
+
+    .error-msg {
+        margin-right: 45em;
+    }
+
+    /*TIP RIGHT SECTION*/
+
+    .tip_per_person {
+        position: absolute;
+        right: 12em;
+        top: 41%;
+        width: 26em;
+        min-height: 25em;
+    }
+
+    .amount-tip {
+        color: var(--White);
+        margin-left: 1em;
+    }
+
+    .tipAmount {
+        margin-top: 1em;
+        font-size: 1em; 
+    }
+
+
+    .totalValue {
+        font-size: 2em;
+        position: relative;
+        left: 2em;
+        top: 20%;
+    }
+
+    .tipPerson {
+        margin: -1em 1em;
+    }
+
+    .total {
+        margin-top: 4em;
+        margin-left: 1em;
+    }
+
+    .totalPer {
+        position: relative;
+        left: 6em;
+    }
+
+    .resetButton {
+        margin-top: 6em;
+    }
+ 
+    
+  }
